@@ -1,0 +1,1 @@
+@element '.fire-p'{$this{display:block;overflow:hidden;max-width:75ch;float:left;border:1px solid violet;background:#000;color:#fff;max-width:calc(100% / eval("parentNode.children.length"))}}
