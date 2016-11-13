@@ -1,10 +1,10 @@
 {
-  "name": "fire-p",
+  "name": "fire-hwhero",
   "version": "0.0.1",
   "description": "Create the perfect paragraph based on font size",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ExoTypography-Elements/fire-p.git"
+    "url": "git+https://github.com/ExoTypography-Elements/fire-hwhero.git"
   },
   "keywords": [
     "vue",
@@ -15,11 +15,11 @@
   "license": "MIT",
   "author": "Findborg Cooperation",
   "scripts": {
-    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/fire-p.js",
+    "watchify": "watchify -vd -p browserify-hmr -e src/main.js -o dist/fire-hwhero.js",
     "serve": "http-server -c 1 -a localhost",
     "dev": "npm-run-all --parallel watchify serve",
     "lint": "eslint --ext .js,.vue src",
-    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/fire-p.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/fire-p.js"
+    "build": "cross-env NODE_ENV=production browserify -g envify -p [ vueify/plugins/extract-css -o dist/fire-hwhero.css ] -e src/main.js | uglifyjs -c warnings=false -m > dist/fire-hwhero.js"
   },
   "browserify": {
     "transform": [
