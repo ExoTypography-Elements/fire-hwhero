@@ -1,0 +1,98 @@
+<template>
+
+  <div class="fire-hwhero">
+    <div style="max-width:1025px;">
+      {{ myImage }}
+      <slot></slot>
+      
+    </div>
+    
+  </div>
+</div>
+</template>
+<script>
+
+export default {
+data () {
+return {
+
+}
+},
+props: ['myImage']
+}
+</script>
+<style type="text/eqcss">
+.tbtn{
+  width: 300px;
+    min-width: 120px;
+    margin: 0 2%;
+    padding: .9rem 2.5rem;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    background-color: #496dff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .32);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+.ghost {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  
+  transition: .2s ease;
+  
+  &:hover {
+    background-color: white;
+    color: black;
+    
+    transition: .2s ease;
+  }
+}
+.fire-hwhero{
+display: flex;
+  align-items: center; 
+  min-height: 25vh;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin: auto;
+  padding:1em;
+
+  }
+
+  @element '.fire-hwhero' and (min-width: 960px) {
+  .fire-hwhero {
+    
+    padding: 4em;
+  }
+}
+  
+
+  @element '[data-min-font],[data-max-font]' {
+  $this {
+    font-size: eval('
+      var vw = innerWidth/100*10, /* equal to 10vw */
+          min = getAttribute("data-min-font"),
+          max = getAttribute("data-max-font");
+      if (min !== null && max !== null) {
+        vw <= min ? min : max <= vw ? max : vw
+      } else if (min !== null) {
+        vw <= min ? min : vw;
+      } else if (max !== null) {
+        max <= vw ? max : vw;
+      }
+    ')px;
+  }
+}
+
+
+
+      
+</style>
